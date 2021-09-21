@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Components/Home";
+import NewGame from "./Components/NewGame";
+import Menu from "./Components/Menu";
+import MenuIcon from "@material-ui/icons/Menu";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import MatchHistory from "./Components/MatchHistory";
+import PlayerStats from "./Components/PlayerStats";
+import { useState } from "react";
 
 function App() {
+  const [menuDisplay, SetMenuDisplay] = useState(true);
+
+  const toggleMenu = () => {
+    SetMenuDisplay(!menuDisplay);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <Menu menuDisplay={menuDisplay} toggleMenu={toggleMenu} />
+        </div>
+        <div className={menuDisplay ? "nav nav-show" : "nav nav-hide"}>
+          <MenuIcon onClick={() => toggleMenu()} />
+        </div>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/new-game" exact>
+            <NewGame />
+          </Route>
+          <Route path="/match-history" exact>
+            <MatchHistory />
+          </Route>
+          <Route path="/player-stats" exact>
+            <PlayerStats />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.match-card {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.match-card img {
+  height: 70px;
+}
+
+.match-card-player {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-card-player p {
+  font-size: 25px;
+}
+
+.match-card-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-card-middle p {
+  font-size: 15px;
+}
+
+.match-card-winner {
+  color: green;
+}
+
+.match-card-loser {
+  color: red;
+}

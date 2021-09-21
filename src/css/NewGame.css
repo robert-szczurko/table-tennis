@@ -1,0 +1,119 @@
+.new-game {
+  background-color: #181828;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.new-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 75%;
+}
+
+.player-select {
+  width: 100%;
+  height: 40%;
+  padding: 30px 0;
+}
+
+.player1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.player2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.players {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.players img {
+  height: 80px;
+}
+
+.player-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-display img {
+  height: 150px;
+}
+
+.player-display h3 {
+  color: white;
+  font-size: 30px;
+  margin: 0 15px;
+}
+
+.start-btn {
+  background: #03a9f4;
+  margin-top: 40px;
+}
+
+.finish-btn {
+  background: #74ff76;
+  margin-top: 40px;
+}
+
+.score {
+  height: 40%;
+  display: flex;
+  color: white;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.player-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 55px;
+  margin-bottom: 30px;
+}
+
+.player-score input {
+  height: 70px;
+  width: 60px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.player-score p {
+  height: 70px;
+  width: 60px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.finish-win {
+  color: green;
+}
+.finish-lose {
+  color: red;
+}

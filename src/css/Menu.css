@@ -1,0 +1,44 @@
+.menu {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  transition: all 0.5s;
+  z-index: 100;
+  width: 100%;
+  max-width: 600px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu p {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-show {
+  height: 100vh;
+  opacity: 1;
+}
+
+.menu-hide {
+  height: 0;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px;
+}
